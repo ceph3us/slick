@@ -803,7 +803,7 @@
 
         $(window).off('resize.slick.slick-' + _.instanceUid, _.resize);
 
-        $('[draggable!=true]', _.$slideTrack).off('dragstart', _.preventDefault);
+        $('[draggable]:not([draggable=true])', _.$slideTrack).off('dragstart', _.preventDefault);
 
         $(window).off('load.slick.slick-' + _.instanceUid, _.setPosition);
         $(document).off('ready.slick.slick-' + _.instanceUid, _.setPosition);
@@ -1415,7 +1415,7 @@
 
         $(window).on('resize.slick.slick-' + _.instanceUid, $.proxy(_.resize, _));
 
-        $('[draggable!=true]', _.$slideTrack).on('dragstart', _.preventDefault);
+        $('[draggable]:not([draggable=true])', _.$slideTrack).on('dragstart', _.preventDefault);
 
         $(window).on('load.slick.slick-' + _.instanceUid, _.setPosition);
         $(document).on('ready.slick.slick-' + _.instanceUid, _.setPosition);
